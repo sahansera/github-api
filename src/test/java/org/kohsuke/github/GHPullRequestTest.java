@@ -544,6 +544,7 @@ public class GHPullRequestTest extends AbstractGitHubWireMockTest {
         }
     }
 
+    // CS427 Issue link: https://github.com/hub4j/github-api/issues/771
     @Test
     public void checkNonExistentReviewer() throws IOException {
         // PR id is based on https://github.com/sahansera/TestRepo/pull/1
@@ -556,6 +557,7 @@ public class GHPullRequestTest extends AbstractGitHubWireMockTest {
         assertThat(reviewer, is(nullValue()));
     }
 
+    // CS427 Issue link: https://github.com/hub4j/github-api/issues/771
     @Test
     public void checkNonExistentAuthor() throws IOException {
         // PR id is based on https://github.com/sahansera/TestRepo/pull/2
@@ -565,6 +567,7 @@ public class GHPullRequestTest extends AbstractGitHubWireMockTest {
         assertThat(pullRequest.getUser().login, is("ghost"));
     }
 
+    // CS427 Issue link: https://github.com/hub4j/github-api/issues/771
     @Test
     public void checkPullRequestReviewer() throws IOException {
         // PR id is based on https://github.com/sahansera/TestRepo/pull/6

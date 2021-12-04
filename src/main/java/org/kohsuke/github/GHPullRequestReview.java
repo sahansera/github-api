@@ -79,6 +79,7 @@ public class GHPullRequestReview extends GHObject {
      * @throws IOException
      *             the io exception
      */
+    // CS427 Issue link: https://github.com/hub4j/github-api/issues/771
     public GHUser getUser() throws IOException {
         if (user != null) {
             return owner.root().getUser(user.getLogin());
