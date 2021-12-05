@@ -3,6 +3,7 @@ package org.kohsuke.github;
 /**
  * The enum for Fork search mode
  */
+// CS427 Issue Link: https://github.com/hub4j/github-api/issues/1154
 public enum GHFork {
 
     /**

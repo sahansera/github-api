@@ -76,6 +76,7 @@ public class GHRepositorySearchBuilder extends GHSearchBuilder<GHRepository> {
      *      in forks</a>
      *
      */
+    // CS427 Issue Link: https://github.com/hub4j/github-api/issues/1154
     @Deprecated
     public GHRepositorySearchBuilder fork(Fork fork) {
         if (Fork.PARENT_ONLY.equals(fork)) {
@@ -110,6 +111,7 @@ public class GHRepositorySearchBuilder extends GHSearchBuilder<GHRepository> {
      *      in forks</a>
      *
      */
+    // CS427 Issue Link: https://github.com/hub4j/github-api/issues/1154
     public GHRepositorySearchBuilder fork(GHFork fork) {
         if (GHFork.PARENT_ONLY.equals(fork)) {
             this.terms.removeIf(term -> term.contains("fork:"));
@@ -253,6 +255,7 @@ public class GHRepositorySearchBuilder extends GHSearchBuilder<GHRepository> {
     /**
      * The enum for Fork search mode. Note: Kept for backward compatibility. Use GHFork instead.
      */
+    // CS427 Issue Link: https://github.com/hub4j/github-api/issues/1154
     @Deprecated
     public enum Fork {
 

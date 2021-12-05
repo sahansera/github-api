@@ -154,6 +154,7 @@ public class GitHubTest extends AbstractGitHubWireMockTest {
 
     }
 
+    // CS427 Issue Link: https://github.com/hub4j/github-api/issues/1154
     @Test
     public void searchContentWithForks() {
         final PagedSearchIterable<GHContent> results = gitHub.searchContent()

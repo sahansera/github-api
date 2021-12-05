@@ -419,6 +419,7 @@ public class GHRepositoryTest extends AbstractGitHubWireMockTest {
         assertThat("Commit has no comments", commitComments.isEmpty());
     }
 
+    // CS427 Issue Link: https://github.com/hub4j/github-api/issues/1154
     @Test
     public void searchAllPublicAndForkedRepos() throws IOException {
         PagedSearchIterable<GHRepository> list = gitHub.searchRepositories()
@@ -464,6 +465,7 @@ public class GHRepositoryTest extends AbstractGitHubWireMockTest {
         assertThat(ghRepositorySearchBuilder.terms.stream().filter(item -> item.contains("is:")).count(), is(1L));
     }
 
+    // CS427 Issue Link: https://github.com/hub4j/github-api/issues/1154
     @Test
     public void ghRepositorySearchBuilderForkDefaultResetForksSearchTerms() {
         GHRepositorySearchBuilder ghRepositorySearchBuilder = new GHRepositorySearchBuilder(gitHub);
